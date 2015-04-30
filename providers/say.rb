@@ -12,6 +12,7 @@ action :say do
   options["username"]   = new_resource.username    if new_resource.username
   options["icon_url"]   = new_resource.icon_url    if new_resource.icon_url
   options["icon_emoji"] = new_resource.icon_emoji  if new_resource.icon_emoji
+  options["attachments"] = new_resource.attachments  if new_resource.attachments
 
   slack.say(new_resource.message,options)
 end
